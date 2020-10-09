@@ -17,11 +17,10 @@ public class MyHashMapTest {
 				value = value + 1;
 
 			myHashMap.add(i, value);
-
 		}
 
 		int frequency = myHashMap.get("to");
+		System.out.println(myHashMap);
 		Assert.assertEquals(2, frequency);
-
 	}
 }

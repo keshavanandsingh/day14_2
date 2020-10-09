@@ -1,6 +1,6 @@
 package Hash.Table;
 
-public class MyMapNode<K, V> implements INode<K> {
+public class MyMapNode<K, V> implements INode<K>  {
 	K key;
 	V value;
 	MyMapNode<K, V> next;
@@ -40,5 +40,14 @@ public class MyMapNode<K, V> implements INode<K> {
 	public void setNext(INode next) {
 		this.next = (MyMapNode<K, V>) next;
 
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("MyMapNode {" + " K = ").append(key).append(" V = ").append(value).append(" }");
+		if (next != null)
+			stringBuilder.append(" - > ").append(next);
+		return stringBuilder.toString();
 	}
 }
