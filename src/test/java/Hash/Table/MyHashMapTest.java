@@ -1,5 +1,6 @@
 package Hash.Table;
 
+import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -17,6 +18,7 @@ public class MyHashMapTest {
 				value = value + 1;
 
 			myHashMap.add(i, value);
+
 		}
 
 		int frequency = myHashMap.get("to");

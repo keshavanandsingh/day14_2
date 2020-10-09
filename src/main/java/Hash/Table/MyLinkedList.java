@@ -92,4 +92,17 @@ public class MyLinkedList<K> {
 	public String toString() {
 		return "MyLinkedListNodes { " + head + " } ";
 	}
+
+	public void delete(INode myNode) {
+
+		INode tempNode = this.head;
+		INode<K> lastButOneNode = tempNode;
+		while (!(tempNode.getKey() == myNode.getKey())) {
+			lastButOneNode = tempNode;
+			tempNode = tempNode.getNext();
+		}
+		lastButOneNode.setNext(tempNode.getNext());
+		tempNode.setNext(null);
+		this.tail = lastButOneNode.getNext();
+	}
 }
